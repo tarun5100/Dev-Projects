@@ -1,0 +1,53 @@
+.main-div{
+    background-color: #e8efef;
+}
+
+.filter-section-div{
+    background-color: white;
+    height: 100%;
+}
+
+.card-div{
+    width: 112%;
+    height: 287px;
+}
+
+.img-font{
+    background-color: #e8efef;
+    border-radius: 5px;
+    height: 50%;
+}
+
+.header-font{
+    font-size: 12px;
+    color: blue;
+}
+
+.font-size-heading{
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.response-font{
+    color: blue;
+}
+
+.button-color{
+    background-color: #74ca87;
+    color: black;
+}
+
+.button-color:focus{
+    background-color: green
+}
+
+.footer-div{
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+/* @media only screen and (max-width:600px) {
+    .right-div {
+     max-width: 300px;
+  }
+} */

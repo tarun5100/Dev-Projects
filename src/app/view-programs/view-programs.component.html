@@ -1,0 +1,88 @@
+<div class="container main-div">
+    <h3 class="mb-4 mt-1">SpaceX Launch Programs</h3>
+    <div class="col col-lg-12">
+        <div class="row">
+
+
+            <!-- Left Section starts here to show the All unique years,launch status etc filters -->
+            <div class="col col-md-3 col-lg-2 filter-section-div ml-3">
+                <div>
+                    <h5 class="mt-2">Filters</h5>
+                </div>
+                <div class="text-center">Launch Year</div>
+                <hr>
+                <div class="row ">
+                    <div class="col-4 mr-1 ml-1 mb-2" *ngFor="let years of uniqueYears">
+                        <button class="btn btn-success button-color" [value]="years"
+                            (click)="filterYear($event.target.value)">{{years}}</button>
+                    </div>
+                </div>
+                <br />
+
+                <div>
+                    <p class="text-center">Successful Launch</p>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-4  mr-1 ml-1  mb-2" *ngFor="let launch of uniqueLaunch">
+                        <button class="btn btn-success button-color" (click)="filterLaunch($event.target.value)"
+                            [value]="launch">{{launch}}</button>
+                    </div>
+                </div>
+
+
+                <br />
+
+                <div>
+                    <p class="text-center">Successful Landing</p>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-4  mr-1 ml-1  mb-2" *ngFor="let landing of uniqueLanding">
+                        <button class="btn btn-success button-color" (click)="filterLanding($event.target.value)"
+                            [value]="landing">{{landing}}</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Left Section Ends -->
+
+
+
+            <!-- Right Section starts here to Set the Data in to the cards right side -->
+            <div class="col col-lg-9 ml-4 pb-5 right-div">
+                <div col->
+                    <div class=" row">
+                        <div class="col-sm-3 col-lg-3 col-md-6 col-xs-12" *ngFor="let data of allData">
+                            <div class="card card-div mb-2 px-3 py-3">
+                                <img class="card-img-top img-font" [src]="data.links.mission_patch"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title header-font">{{data.mission_name}} #{{data.flight_number}}
+                                    </h5>
+
+                                    <p class="card-text font-size-heading"><b> Mission Ids:</b>{{data.mission_id}}</p>
+
+                                    <p class="card-text font-size-heading"><b> Launch Year:</b><span
+                                            class="response-font">{{data.launch_year}}</span></p>
+                                    <p class="card-text font-size-heading"><b> Successful Launch:</b><span
+                                            class="response-font">{{data.launch_success}}</span></p>
+                                    <p class="card-text font-size-heading"><b> Successful landing:</b><span
+                                            class="response-font">{{data.is_tentative}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Right Section Ends -->
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer-div">
+        <p class="text-center"><b>Developed by:</b><span style="color: blue;">Tarun Sood</span></p>
+    </div>
+</div>
